@@ -8,7 +8,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   outline: none;
 }
 
-body { font-size: 16px; line-height: 1.2; font-family: 'formular', sans-serif, Tahoma, Verdana; font-weight: 300;}
+body { font-size: 16px; line-height: 1.2; font-family: 'Mont', sans-serif, Tahoma, Verdana; font-weight: 400; color: #3d3d3d;}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ol, ul { list-style: none; }
@@ -37,7 +37,7 @@ html {
   box-sizing: inherit;
 }
 
-// input::-webkit-input-placeholder { color: #fff; }
-// input:-ms-input-placeholder { color: #fff; }
-// input::-ms-input-placeholder { color: #fff; }
-// input::placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #b0b0b0;}
+input:-ms-input-placeholder { color: #b0b0b0;}
+input::-ms-input-placeholder { color: #b0b0b0;}
+input::placeholder { color: #b0b0b0;}

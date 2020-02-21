@@ -1,0 +1,47 @@
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__media {
+    min-width: 72px;
+    margin-right: 10px;
+}
+
+.logo__title {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.logo__subTitle {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #589c95;
+}
+
+@media(max-width: 768px) {
+    .logo__media  {
+        max-width: 60px;
+        min-width: 60px;
+    }
+
+    .logo__title {
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+    .logo__subTitle {
+        font-size: 18px;
+        line-height: 1.1;
+    }
+}
+
+@media(max-width: 480px) {
+    .logo__subTitle {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+}

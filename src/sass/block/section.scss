@@ -1,0 +1,26 @@
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &_header {
+        background-image: url("../media/section/header.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+}
+
+@media(max-width: 1030px) {
+    .section {
+        background-image: url("../media/section/header-1030.jpg");
+        background-size: auto;
+    }
+}
+
+@media(max-width: 480px) {
+    .section {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}

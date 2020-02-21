@@ -2,8 +2,75 @@
 <html lang="en">
     <%- include('block/head') %>
     <body>
-        <%- include('block/header') %>
-        <%- include('block/footer') %>
+        <section class="section section_header">
+            <div class="container">
+                <header class="header">
+                    <div class="header__head">
+                        <div class="logo">
+                            <div class="logo__media">
+                                <img src="../media/logo.png" alt="">
+                            </div>
+                            <div class="logo__info">
+                                <div class="logo__title">30 дней с КЕТО:</div>
+                                <div class="logo__subTitle">ешь и худей!</div>
+                            </div>
+                        </div>
+                        <div class="header__logo">
+                            <div class="header__icons"><img src="../media/header/icon.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="header__box header__box_first">
+                        <div class="header__title">
+                            Профессиональная программа <span>комфортного</span>
+                            <span>снижения</span>
+                            <span>веса</span>
+                        </div>
+                        <div class="header__col">
+                            <div class="header__check">
+                                <div class="header__item">
+                                    <div class="header__item-media"></div>
+                                    <div class="header__item-title">
+                                        Кетоз вызывает углеводное голодание клеток
+                                        <span>организм для получения энергии начинает расщеплять жир с образованием большого количества КЕТО-ВНВ</span>
+                                    </div>
+                                </div>
+                                <div class="header__item">
+                                    <div class="header__item-media"></div>
+                                    <div class="header__item-title">
+                                        КЕТО-ВНВ предотвращает повторное отложение жира
+                                        <span>организм для получения энергии</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__exit">
+                                <div class="header__exit-title">До окончании акции осталось:</div>
+                                <div class="header__exit-box">
+                                    <div class="header__exit-item">
+                                        <div class="header__exit-time">00</div>
+                                        <div class="header__exit-name">дней</div>
+                                    </div>
+                                    <div class="header__exit-item">
+                                        <div class="header__exit-time">03</div>
+                                        <div class="header__exit-name">часов</div>
+                                    </div>
+                                    <div class="header__exit-item">
+                                        <div class="header__exit-time">27</div>
+                                        <div class="header__exit-name">минут</div>
+                                    </div>
+                                    <div class="header__exit-item">
+                                        <div class="header__exit-time">48</div>
+                                        <div class="header__exit-name">секунд</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__box">
+                        <%- include('block/form') %>
+                    </div>
+                </header>
+            </div>
+        </section>
         <%- include('block/script') %>
     </body>
 </html>

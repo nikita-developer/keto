@@ -1,0 +1,111 @@
+
+.form {
+    width: 348px;
+    background-color: #fff;
+    border: 1px solid #b0b0b0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.form__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #efefef;
+}
+
+.form__head-name {
+    font-size: 18px;
+    font-family: 'Bebas';
+    color: #c83c8a;
+    font-weight: 700;
+}
+
+.form__head-price {
+    font-size: 64px;
+    font-family: 'Bebas';
+    color: #c83c8a;
+    font-weight: 700;
+    line-height: .8;
+}
+
+.form__head-priceOld {
+    font-size: 30px;
+    text-decoration: line-through;
+}
+
+.form__body {
+    padding: 20px 30px;
+}
+
+.form__item {
+    & + & {
+        margin-top: 8px;
+    }
+}
+
+.form__select {
+    width: 100%;
+    padding: 6.5px;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    color: #b0b0b0;
+}
+
+.form__field {
+    width: 100%;
+    padding: 6.5px;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+}
+
+.form__footer {
+    padding: 0 30px 40px;
+    text-align: center;
+}
+
+@media(max-width: 1030px) {
+    .form {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media(max-width: 768px) {
+    .form__head {
+        padding: 15px;
+    }
+
+    .form__body {
+        padding: 20px 15px;
+    }
+
+    .form__footer {
+        padding: 0 15px 30px;
+    }
+
+    .form__head-name {
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+
+    .form__head-price {
+        font-size: 45px;
+    }
+
+    .form__head-nameOld {
+        font-size: 14px;
+    }
+
+    .form__head-priceOld {
+        font-size: 22px;
+    }
+}
+
+@media(max-width: 480px) {
+    .form {
+        width: 100%;
+        max-width: none;
+    }
+}
