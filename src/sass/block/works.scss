@@ -1,0 +1,357 @@
+
+.works__title {
+    margin-bottom: 15px;
+    font-size: 110px;
+    line-height: 90px;
+    color: #c83c8a;
+    font-family: 'Bebas';
+
+    & span {
+        font-size: 110px;
+        display: block;
+        color: #589f97;
+    }
+}
+
+.works__subTitle {
+    margin-bottom: 40px;
+    font-size: 20px;
+
+    & span {
+        font-size: 30px;
+        font-weight: 500;
+    }
+}
+
+.works__benefit {
+    position: relative;
+    margin-top: 62px;
+    margin-bottom: 62px;
+    display: flex;
+    padding: 35px 50px;
+    background-color: #44aca6;
+
+    &::before {
+        position: absolute;
+        top: -32px;
+        right: -589px;
+        width: 771px;
+        height: 434px;
+        background-image: url('../media/works/sm.png');
+        background-repeat: no-repeat;
+        border-bottom-left-radius: 100%;
+        content: '';
+    }
+}
+
+.works__box {
+    margin-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.works__item {
+    position: relative;
+    width: 218px;
+
+    &:nth-of-type(1) {
+        & .works__media {
+            background-image: url('../media/works/img-1.png');
+        }
+
+        &::after {
+            position: absolute;
+            right: -28px;
+            top: 79px;
+            width: 16px;
+            height: 19px;
+            background-image: url('../media/works/arrow.png');
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+
+    &:nth-of-type(2) {
+        & .works__media {
+            background-image: url('../media/works/img-2.png');
+        }
+
+        &::after {
+            position: absolute;
+            right: -28px;
+            top: 79px;
+            width: 16px;
+            height: 19px;
+            background-image: url('../media/works/arrow.png');
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+
+    &:nth-of-type(3) {
+        & .works__media {
+            background-image: url('../media/works/img-3.png');
+        }
+
+        &::after {
+            position: absolute;
+            right: -28px;
+            top: 79px;
+            width: 16px;
+            height: 19px;
+            background-image: url('../media/works/arrow.png');
+            background-repeat: no-repeat;
+            content: '';
+        }
+    }
+
+    &:nth-of-type(4) {
+        & .works__media {
+            background-image: url('../media/works/img-4.png');
+        }
+    }
+}
+
+.works__media {
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 178px;
+    height: 178px;
+    border-radius: 50%;
+    background-color: #ffe1f2;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.works__info {
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+
+    & span {
+        font-size: 20px;
+        font-weight: 500;
+        color: #589f97;
+    }
+}
+
+.works__benefit-item {
+    width: 50%;
+
+    &_right {
+        text-align: right;
+
+        & .works__benefit-info {
+            margin-left: auto;
+        }
+    }
+}
+
+.works__benefit-title {
+    font-size: 100px;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Bebas';
+    margin-bottom: 30px;
+    line-height: .8;
+}
+
+.works__benefit-info {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 700;
+
+    & + & {
+        margin-top: 25px;
+    }
+
+    & mark {
+        font-size: inherit;
+        background: transparent;
+        color: #e7d52f;
+    }
+
+    & span {
+        font-size: inherit;
+        display: block;
+    }
+}
+
+.works__benefit-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 339px;
+    height: 627px;
+    background-image: url('../media/works/product.png');
+    background-repeat: no-repeat;
+}
+
+@media(max-width: 1030px) {
+    .works__benefit {
+        padding: 25px;
+
+        &::before {
+            right: -620px;
+        }
+    }
+
+    .works__title {
+        font-size: 80px;
+        line-height: .9;
+
+        & span {
+            font-size: inherit;
+        }
+    }
+
+    .works__subTitle {
+        font-size: 22px;
+
+        & span {
+            font-size: 26px;
+        }
+    }
+
+    .works__info {
+        font-size: 16px;
+
+        & span {
+            font-size: inherit;
+        }
+    }
+
+    .works__item {
+        &::after {
+            display: none;
+        }
+    }
+
+    .works__benefit-info {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .works__benefit-media {
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 0);
+        width: 111px;
+        height: 223px;
+        background-image: url('../media/works/product-1030.png');
+    }
+
+    .works__benefit-title {
+        font-size: 60px;
+    }
+}
+
+@media(max-width: 768px) {
+    .works__title {
+        font-size: 60px;
+    }
+
+    .works__subTitle {
+        font-size: 18px;
+
+        & span {
+            font-size: 22px;
+        }
+    }
+
+    .works__box {
+        flex-wrap: wrap;
+        margin-bottom: -30px;
+    }
+
+    .works__item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .works__benefit {
+        flex-direction: column;
+    }
+
+    .works__benefit-item {
+        width: 100%;
+
+        &_right {
+            margin-top: 30px;
+            text-align: left;
+        }
+    }
+
+    .works__benefit-info {
+        & + & {
+            margin-top: 10px;
+        }
+
+        & span {
+            display: inline;
+        }
+    }
+
+    .works__benefit-title {
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+
+    .works__benefit-media {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .works__title {
+        font-size: 28px;
+        text-align: center;
+
+        & span {
+            display: inline;
+        }
+    }
+
+    .works__subTitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        & span {
+            font-size: 18px;
+        }
+    }
+
+    .works__box {
+        margin-bottom: 0;
+    }
+
+    .works__item {
+        width: 100%;
+        margin-bottom: 0;
+
+        & + & {
+            margin-top: 15px;
+        }
+
+        &:nth-of-type(4) {
+            .works__media {
+                background-size: cover;
+            }
+        }
+    }
+
+    .works__media {
+        width: 120px;
+        height: 120px;
+        background-size: 80%;
+        margin-bottom: 5px;
+    }
+
+    .works__info {
+        max-width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}

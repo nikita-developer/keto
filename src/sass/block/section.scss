@@ -9,12 +9,69 @@
         background-position: center bottom;
         background-size: cover;
     }
+
+    &_steps {
+        background: rgb(75,174,158);
+        background: radial-gradient(circle, rgba(75,174,158,1) 0%, rgba(96,181,134,1) 0%, rgba(75,174,158,1) 100%);
+    }
+
+    &_works {
+        overflow: hidden;
+        background-image: url("../media/section/works.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    &_popular {
+        overflow: hidden;
+        background-image: url("../media/section/popular.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: #f4f4f4;
+        padding-top: 100px;
+    }
+
+    &_join {
+        background-image: url("../media/section/join.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: #fff;
+        padding-bottom: 190px;
+    }
 }
 
 @media(max-width: 1030px) {
     .section {
-        background-image: url("../media/section/header-1030.jpg");
-        background-size: auto;
+        &_header {
+            background-image: url("../media/section/header-1030.jpg");
+            background-size: auto;
+        }
+
+        &_steps {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        &_popular {
+            padding-top: 60px;
+            background-image: url("../media/section/popular-1030.jpg");
+        }
+
+        &_join {
+            background-image: url("../media/section/join-1030.jpg");
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .section {
+        &_popular {
+            background-image: none;
+        }
+
+        &_join {
+            background-image: url("../media/section/join-768.jpg");
+        }
     }
 }
 
@@ -22,5 +79,10 @@
     .section {
         padding-top: 25px;
         padding-bottom: 25px;
+
+        &_join {
+            padding-bottom: 220px;
+            background-image: url("../media/section/join-480.jpg");
+        }
     }
 }

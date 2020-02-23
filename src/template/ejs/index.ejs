@@ -1,76 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('block/head') %>
-    <body>
-        <section class="section section_header">
-            <div class="container">
-                <header class="header">
-                    <div class="header__head">
-                        <div class="logo">
-                            <div class="logo__media">
-                                <img src="../media/logo.png" alt="">
-                            </div>
-                            <div class="logo__info">
-                                <div class="logo__title">30 дней с КЕТО:</div>
-                                <div class="logo__subTitle">ешь и худей!</div>
-                            </div>
+<%- include('block/head') %>
+
+<body>
+    <section class="section section_header">
+        <div class="container">
+            <header class="header">
+                <div class="header__head">
+                    <div class="logo">
+                        <div class="logo__media">
+                            <img src="../media/logo.png" alt="">
                         </div>
-                        <div class="header__logo">
-                            <div class="header__icons"><img src="../media/header/icon.png" alt=""></div>
+                        <div class="logo__info">
+                            <div class="logo__title">30 дней с КЕТО:</div>
+                            <div class="logo__subTitle">ешь и худей!</div>
                         </div>
                     </div>
-                    <div class="header__box header__box_first">
-                        <div class="header__title">
-                            Профессиональная программа <span>комфортного</span>
-                            <span>снижения</span>
-                            <span>веса</span>
-                        </div>
-                        <div class="header__col">
-                            <div class="header__check">
-                                <div class="header__item">
-                                    <div class="header__item-media"></div>
-                                    <div class="header__item-title">
-                                        Кетоз вызывает углеводное голодание клеток
-                                        <span>организм для получения энергии начинает расщеплять жир с образованием большого количества КЕТО-ВНВ</span>
-                                    </div>
-                                </div>
-                                <div class="header__item">
-                                    <div class="header__item-media"></div>
-                                    <div class="header__item-title">
-                                        КЕТО-ВНВ предотвращает повторное отложение жира
-                                        <span>организм для получения энергии</span>
-                                    </div>
+                    <div class="header__logo">
+                        <div class="header__icons"><img src="../media/header/icon.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="header__box header__box_first">
+                    <div class="header__title">
+                        Профессиональная программа <span>комфортного</span>
+                        <span>снижения</span>
+                        <span>веса</span>
+                    </div>
+                    <div class="header__col">
+                        <div class="header__check">
+                            <div class="header__item">
+                                <div class="header__item-media"></div>
+                                <div class="header__item-title">
+                                    Кетоз вызывает углеводное голодание клеток
+                                    <span>организм для получения энергии начинает расщеплять жир с образованием большого количества КЕТО-ВНВ</span>
                                 </div>
                             </div>
-                            <div class="header__exit">
-                                <div class="header__exit-title">До окончании акции осталось:</div>
-                                <div class="header__exit-box">
-                                    <div class="header__exit-item">
-                                        <div class="header__exit-time">00</div>
-                                        <div class="header__exit-name">дней</div>
-                                    </div>
-                                    <div class="header__exit-item">
-                                        <div class="header__exit-time">03</div>
-                                        <div class="header__exit-name">часов</div>
-                                    </div>
-                                    <div class="header__exit-item">
-                                        <div class="header__exit-time">27</div>
-                                        <div class="header__exit-name">минут</div>
-                                    </div>
-                                    <div class="header__exit-item">
-                                        <div class="header__exit-time">48</div>
-                                        <div class="header__exit-name">секунд</div>
-                                    </div>
+                            <div class="header__item">
+                                <div class="header__item-media"></div>
+                                <div class="header__item-title">
+                                    КЕТО-ВНВ предотвращает повторное отложение жира
+                                    <span>организм для получения энергии</span>
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="header__exit">
+                            <div class="header__exit-title">До окончании акции осталось:</div>
+                            <div class="header__exit-box">
+                                <div class="header__exit-item">
+                                    <div class="header__exit-time">00</div>
+                                    <div class="header__exit-name">дней</div>
+                                </div>
+                                <div class="header__exit-item">
+                                    <div class="header__exit-time">03</div>
+                                    <div class="header__exit-name">часов</div>
+                                </div>
+                                <div class="header__exit-item">
+                                    <div class="header__exit-time">27</div>
+                                    <div class="header__exit-name">минут</div>
+                                </div>
+                                <div class="header__exit-item">
+                                    <div class="header__exit-time">48</div>
+                                    <div class="header__exit-name">секунд</div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="clock flip-clock-wrapper" style="margin:2em;"><span class="flip-clock-divider days"><span class="flip-clock-label">дней</span></span>
+                            <ul class="flip ">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">9</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">9</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flip ">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul><span class="flip-clock-divider hours"><span class="flip-clock-label">часов</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                            <ul class="flip ">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">1</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">1</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flip ">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">3</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">3</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul><span class="flip-clock-divider minutes"><span class="flip-clock-label">минут</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                            <ul class="flip  play">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">1</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">1</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flip  play">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">0</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">9</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">9</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul><span class="flip-clock-divider seconds"><span class="flip-clock-label">секунд</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+                            <ul class="flip  play">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">3</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">3</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">2</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flip  play">
+                                <li class="flip-clock-before">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">8</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">8</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="flip-clock-active">
+                                    <a href="#">
+                                        <div class="up">
+                                            <div class="shadow"></div>
+                                            <div class="inn">7</div>
+                                        </div>
+                                        <div class="down">
+                                            <div class="shadow"></div>
+                                            <div class="inn">7</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="header__box">
-                        <%- include('block/form') %>
-                    </div>
-                </header>
+                </div>
+                <div class="header__box">
+                    <%- include('block/form') %>
+                </div>
+            </header>
+        </div>
+    </section>
+    <section class="section section_steps">
+        <div class="container">
+            <div class="steps">
+                <div class="steps__item">
+                    <div class="steps__nomber">1</div>
+                    <div class="steps__name">Безопасный</div>
+                </div>
+                <div class="steps__item">
+                    <div class="steps__nomber">2</div>
+                    <div class="steps__name">Натуральный</div>
+                </div>
+                <div class="steps__item">
+                    <div class="steps__nomber">3</div>
+                    <div class="steps__name">Эффективный</div>
+                </div>
             </div>
-        </section>
-        <%- include('block/script') %>
-    </body>
+        </div>
+    </section>
+    <section class="section section_works">
+        <div class="container">
+            <div class="works">
+                <div class="works__title">Как работает <span>кетоз</span></div>
+                <div class="works__subTitle">
+                    <span>Кетоз</span> – эффективный путь снижения веса при получении организмом энергии из расщепленного жира, вместо глюкозы.
+                </div>
+                <div class="works__box">
+                    <div class="works__item">
+                        <div class="works__media"></div>
+                        <div class="works__info">
+                            При высоком потреблении жиров, <span>уровень глюкозы снижается</span>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__media"></div>
+                        <div class="works__info">
+                            <span>Липаза высвобождает</span> запасы триглицеридов
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__media"></div>
+                        <div class="works__info">
+                            Жирные кислоты <span>поступают в печень</span>
+                        </div>
+                    </div>
+                    <div class="works__item">
+                        <div class="works__media"></div>
+                        <div class="works__info">
+                            <span>Печень начинает вырабатывать кетоны,</span> которые используются организмом в качестве энергии.
+                        </div>
+                    </div>
+                </div>
+                <div class="works__benefit">
+                    <div class="works__benefit-item">
+                        <div class="works__benefit-title">польза</div>
+                        <div class="works__benefit-info">
+                            <span>Более эффективный источник</span> <span>топлива, который <mark>стимулирует</mark></span> <span><mark>производство митохондрий.</mark></span>
+                            <span>Почему это важно? Большое</span> <span>количество митохондрий приводит</span> <span>к большему количеству энергии</span> <span>и более здоровым клеткам.</span>
+                        </div>
+                        <div class="works__benefit-info">
+                            <span>Действуют как <mark>антиоксиданты</mark> –</span> <span>помогают защитить организм от</span> повреждений и болезней.
+                        </div>
+                        <div class="works__benefit-info">
+                            <span>Помогают <mark>худеть правильно</mark>,</span> <span>без вреда для организма</span> и возврата веса.
+                        </div>
+                    </div>
+                    <div class="works__benefit-media"></div>
+                    <div class="works__benefit-item works__benefit-item_right">
+                        <div class="works__benefit-title">кетонов</div>
+                        <div class="works__benefit-info">
+                            <span><mark>Помогают бороться с раком. </mark></span>
+                            <span>Раковые клетки не могут</span> <span>использовать кетоны в качестве</span> <span>топлива. Без топлива раковые клетки не</span> <span>имеют энергии для роста, и иммунная</span> система устраняет их из организма.
+                        </div>
+                        <div class="works__benefit-info">
+                            Сохраняют <mark>мышечную массу</mark>.
+                        </div>
+                        <div class="works__benefit-info">
+                            <span>Защищают и <mark>восстанавливает</mark></span> <mark>нервную систему</mark>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section_popular">
+        <div class="container">
+            <div class="popular">
+                <div class="popular__title">Мировой бестселлер <span>в диетологии!</span></div>
+                <div class="popular__description">
+                    <mark>Почему КЕТО самый популярный продукт для похудения?</mark>
+                    <span>
+                        <b>КЕТО создан на основе синтезированного растительного волокна и природных компонентов.</b> Бета-гидроксибутират первый субстрат, который запускает метаболическое
+                        состояние кетоза в действие. BHB на молекулярном уровне разгоняет метаболизм, повышает сопротивляемость
+                        иммунитета и разрушает жировые клетки, превращая их в энергию. Попадая в организм, BHB запускает процесс переработки жиров и углеводов в энергию, что приводит к стремительной, а главное безопасной потери веса.
+                    </span>
+                    <mark>KETO DIET с BHB помогает терять до 1 килограммажира в день! Присоединяйтесь к тысячам людей, которые уже ощутили эффект кетоза!</mark>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section_join">
+        <div class="container">
+            <div class="join">
+                <div class="join__title">Большинство людей <span>не могли похудеть годами,</span> <span>пока не попробовали <mark>КЕТО DIET!</mark></span></div>
+                <div class="join__slide owl-carousel">
+                    <div class="join__item"><img src="../media/join/slide-1.jpg" alt=""></div>
+                    <div class="join__item"><img src="../media/join/slide-1.jpg" alt=""></div>
+                    <div class="join__item"><img src="../media/join/slide-1.jpg" alt=""></div>
+                </div>
+                <div class="join__go">
+                    <div class="join__go-title">Присоединяйтесь к уже похудевшим вместе с <span>keto diet!</span></div>
+                    <div class="join__go-btn">Присоединиться!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include('block/script') %>
+</body>
+
 </html>
