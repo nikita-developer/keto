@@ -1,0 +1,152 @@
+
+.science {
+    position: relative;
+}
+
+.science__title {
+    margin-bottom: 30px;
+    font-size: 100px;
+    color: #589f97;
+    font-family: 'Bebas';
+    font-weight: 700;
+    line-height: .9;
+
+    & span {
+        display: block;
+        font-size: 60px;
+        color: #000;
+    }
+}
+
+.science__subTitle {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #c83c8a;
+    font-weight: 500;
+}
+
+.science__media {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 586px;
+    height: 708px;
+    background-image: url('../media/science/bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.science__item {
+    position: relative;
+    padding-left: 100px;
+    min-height: 82px;
+    max-width: 640px;
+
+    & + & {
+        margin-top: 25px;
+    }
+}
+
+.science__item-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 82px;
+    height: 82px;
+    background-image: url('../media/science/icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.science__description {
+    font-size: 18px;
+
+    & b {
+        font-weight: 500;
+        font-size: inherit;
+    }
+}
+
+@media(max-width: 1030px) {
+    .science__title {
+        font-size: 72px;
+        color: #c83c8a;
+
+        & span {
+            font-size: 50px;
+            color: #000;
+        }
+    }
+
+    .science__media {
+        display: none;
+    }
+
+    .science__description {
+        font-size: 16px;
+    }
+
+    .science__item {
+        padding-left: 75px;
+        min-height: 60px;
+        max-width: none;
+    }
+
+    .science__item-media {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media(max-width: 768px) {
+    .science__title {
+        font-size: 60px;
+
+
+        & span {
+            display: inline;
+            font-size: inherit;
+        }
+    }
+
+    .science__subTitle {
+        font-size: 20px;
+    }
+
+    .science__description {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 480px) {
+    .science__title {
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .science__subTitle {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .science__item-media {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    .science__item {
+        padding-left: 0;
+        min-height: none;
+
+        & + & {
+            margin-top: 15px;
+        }
+    }
+
+    .science__description {
+        text-align: center;
+    }
+}

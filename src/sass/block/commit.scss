@@ -1,0 +1,256 @@
+
+.commit__title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-family: 'Bebas';
+    font-weight: 700;
+    text-align: center;
+}
+
+.commit__slide {
+    width: calc(100% - 80px);
+    margin-right: auto;
+    margin-left: auto;
+
+    & .owl-nav {
+        & span {
+            display: none;
+        }
+    }
+
+    & .owl-dots {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    & .owl-dot {
+        box-sizing: content-box;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #49aea1 !important;
+
+        &.active {
+            background-color: #49aea1;
+        }
+
+        & + .owl-dot {
+            margin-left: 10px !important;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    & .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: -40px;
+        width: calc(100% + 80px);
+        margin-top: -37px;
+        height: 35px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & .owl-prev {
+        width: 35px;
+        height: 35px;
+        background-image: url('../media/commit/arrow-left.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        transition: .3s transform;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    & .owl-next {
+        width: 35px;
+        height: 35px;
+        background-image: url('../media/commit/arrow-right.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        transition: .3s transform;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.commit__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 15px;
+    background-color: #f4f4f6 ;
+}
+
+.commit__item-title {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.commit__item-before {
+    width: calc(50% - 240px);
+    text-align: right;
+}
+
+.commit__item-after {
+    width: calc(50% - 240px);
+}
+
+.commit__item-subTitle {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.commit__item-description {
+    font-size: 18px;
+
+    & span {
+        font-size: inherit;
+        display: block;
+    }
+
+    & b {
+        font-weight: 700;
+    }
+
+    & mark {
+        display: inline-block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #c83c8a;
+        background-color: transparent;
+    }
+
+    & strong {
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+.commit__item-info {
+    margin-top: 35px;
+    font-size: 18px;
+    text-align: center;
+
+    & mark {
+        font-size: inherit;
+        background-color: transparent;
+        color: #49aea1;
+
+        & b {
+            font-size: inherit;
+            font-weight: 500;
+        }
+    }
+}
+
+@media(max-width: 1030px) {
+    .commit__item-before {
+        width: calc(50% - 170px);
+    }
+
+    .commit__item-after {
+        width: calc(50% - 170px);
+    }
+
+    .commit__item-media {
+        max-width: 300px;
+    }
+
+    .commit__item-subTitle {
+        font-size: 18px;
+    }
+
+    .commit__item-description {
+        font-size: 16px;
+
+        & mark {
+            font-size: 20px;
+        }
+
+        & strong {
+            font-size: 20px;
+        }
+    }
+
+    .commit__item-info {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 768px) {
+    .commit__title {
+        line-height: 1;
+        font-size: 55px;
+    }
+
+    .commit__item-media {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .commit__item-before {
+        order: 1;
+        width: calc(50% - 15px);
+    }
+
+    .commit__item-after {
+        order: 2;
+        width: calc(50% - 15px);
+    }
+
+    .commit__item-info {
+        margin-top: 20px;
+        order: 3;
+    }
+}
+
+@media(max-width: 480px) {
+    .commit__title {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: #c83c8a;
+    }
+
+
+    .commit__slide {
+        width: 100%;
+    }
+
+    .commit__item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .commit__item-title {
+        font-size: 18px;
+    }
+
+    .commit__item-subTitle {
+        font-size: 14px;
+    }
+
+    .commit__item-info {
+        font-size: 14px;
+    }
+}

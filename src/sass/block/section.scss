@@ -38,6 +38,40 @@
         background-color: #fff;
         padding-bottom: 190px;
     }
+
+    &_brand {
+        position: relative;
+        background-image: url("../media/section/brand.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-color: #fff;
+        padding-top: 230px;
+        padding-bottom: 190px;
+    }
+
+    &_science {
+        overflow: hidden;
+        background: rgb(255,234,246);
+        background: linear-gradient(to top, rgba(255,234,246,1) 0%, rgba(255,248,252,1) 100%);
+    }
+
+    &_health {
+        background-color: #fff;
+        padding-bottom: 0;
+    }
+
+    &_weight {
+        background: rgb(110,186,119);
+        background: linear-gradient(rgba(110,186,119,1) 0%, rgba(73,174,161,1) 100%);
+    }
+
+    &_commit {
+        position: relative;
+        background-image: url("../media/section/commit.jpg");
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-color: #fff;
+    }
 }
 
 @media(max-width: 1030px) {
@@ -60,6 +94,17 @@
         &_join {
             background-image: url("../media/section/join-1030.jpg");
         }
+
+        &_brand {
+            padding-top: 60px;
+            padding-bottom: 100px;
+            background-image: url("../media/section/brand-1030.jpg");
+            background-size: cover;
+        }
+
+        &_health {
+            padding-bottom: 60px;
+        }
     }
 }
 
@@ -72,6 +117,10 @@
         &_join {
             background-image: url("../media/section/join-768.jpg");
         }
+
+        &_brand {
+            background-image: url("../media/section/brand-768.jpg");
+        }
     }
 }
 
@@ -83,6 +132,16 @@
         &_join {
             padding-bottom: 220px;
             background-image: url("../media/section/join-480.jpg");
+        }
+
+        &_brand {
+            padding-bottom: 60px;
+            background-image: url("../media/section/brand-480.jpg");
+        }
+
+        &_commit {
+            background-size: 200px;
+            background-position-x: -130px; 
         }
     }
 }

@@ -212,8 +212,7 @@
 
 @media(max-width: 768px) {
     .join__title {
-        font-size: 28px;
-        text-align: center;
+        font-size: 60px;
 
         & span {
             display: inline;
@@ -257,7 +256,9 @@
 
 @media(max-width: 480px) {
     .join__title {
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        font-size: 28px;
+        text-align: center;
     }
 
     .join__go {

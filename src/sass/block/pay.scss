@@ -1,0 +1,48 @@
+
+.pay {
+     width: 350px;
+     border-radius: 35px;
+     overflow: hidden;
+     border: 1px solid #b0b0b0;
+}
+
+.pay__head {
+    padding: 15px;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.pay__title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #c83c8a;
+    font-family: 'Bebas';
+    line-height: .9;
+
+    & span {
+        display: block;
+        font-size: 30px;
+    }
+}
+
+.pay__body {
+    padding-top: 20px;
+    background-color: #fff;
+}
+
+.pay__subTitle {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+.pay__good {
+    & label {
+        font-size: 15px;
+    }
+}
+
+.pay__check {
+    width: 11px;
+    height: 11px;
+}

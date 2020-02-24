@@ -1,0 +1,256 @@
+
+.proces__title {
+    margin-bottom: 40px;
+    font-size: 72px;
+    color: #c83c8a;
+    font-family: 'Bebas';
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+
+    & span {
+        font-family: 'Mont';
+        display: block;
+        font-size: 36px;
+        color: #000000;
+        font-weight: 400;
+    }
+}
+
+.proces__box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proces__item {
+    width: calc(50% - 15px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+        & .proces__media {
+            &::before {
+                left: -70px;
+                bottom: -10px;
+                width: 183px;
+                height: 142px;
+                background-image: url('../media/proces/img-3.png');
+            }
+        }
+    }
+
+    &:last-child {
+        & .proces__media {
+            &::before {
+                right: 0;
+                bottom: -10px;
+                width: 80px;
+                height: 159px;
+                background-image: url('../media/proces/img-4.png');
+            }
+        }
+    }
+}
+
+.proces__name {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.proces__media {
+    position: relative;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::before {
+        position: absolute;
+        background-repeat: no-repeat;
+        content: '';
+    }
+}
+
+.proces__item-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+
+    & mark {
+        background-color: transparent;
+        font-size: inherit;
+        font-weight: 500;
+    }
+}
+
+.proces__info {
+    position: relative;
+    font-size: 18px;
+    max-width: 397px;
+    margin-right: auto;
+    margin-left: auto;
+
+    & + & {
+        margin-top: 15px;
+    }
+
+    & b {
+        font-size: inherit;
+    }
+}
+
+.proces__info-nomber {
+    position: absolute;
+    left: -44px;
+    top: 3px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e6e6e6;
+    text-align: center;
+    line-height: 40px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.proces__arrow {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.proces__subTitle {
+    margin-top: auto;
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 500;
+
+    &_color {
+        color: #44aca6;
+    }
+}
+
+@media(max-width: 1030px) {
+    .proces__title {
+        text-align: left;
+        line-height: .9;
+
+        & span {
+            display: inline;
+            font-size: inherit;
+            font-family: 'Bebas';
+        }
+    }
+
+    .proces__name {
+        font-size: 22px;
+    }
+
+    .proces__media {
+        max-width: 280px;
+    }
+
+    .proces__item-title {
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+
+    .proces__info {
+        font-size: 16px;
+
+        & + & {
+            margin-top: 10px;
+        }
+    }
+
+    .proces__arrow {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        max-width: 150px;
+    }
+
+    .proces__subTitle {
+        margin-top: 0;
+        font-size: 24px;
+    }
+
+    .proces__info-nomber {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .proces__title {
+        font-size: 60px;
+    }
+
+    .proces__item {
+        &:first-child {
+            & .proces__media {
+                &::before {
+                    left: -20px;
+                    bottom: 0px;
+                    width: 86px;
+                    height: 67px;
+                    background-image: url('../media/proces/img-3-768.png');
+                }
+            }
+        }
+
+        &:last-child {
+            & .proces__media {
+                &::before {
+                    right: 5px;
+                    bottom: 10px;
+                    width: 44px;
+                    height: 87px;
+                    background-image: url('../media/proces/img-4-768.png');
+                }
+            }
+        }
+    }
+
+    .proces__name {
+        font-size: 18px;
+    }
+
+    .proces__media {
+        max-width: 180px;
+    }
+
+    .proces__item-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .proces__info {
+        font-size: 14px;
+    }
+
+    .proces__subTitle {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width: 480px) {
+    .proces__title {
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .proces__box {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .proces__item {
+        width: 100%;
+
+        & + & {
+            margin-top: 20px;
+        }
+    }
+}
