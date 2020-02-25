@@ -1,0 +1,85 @@
+
+.contact {
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #b0b0b0;
+    padding: 30px;
+}
+
+.contact__title {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.contact__description {
+    margin-bottom: 20px;
+}
+
+.contact__item {
+    & + & {
+        margin-top: 10px;
+    }
+
+    &_group {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contact__select {
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact__field {
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #9a9a9a;
+
+    &_width {
+        max-width: 200px;
+        margin-right: 20px;
+    }
+}
+
+.contact__textarea {
+    resize: vertical;
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact__captcha {
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #9a9a9a;
+    cursor: default;
+}
+
+.contact__btn {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    padding: 8px 30px;
+    background-color: #44aca6;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s background-color;
+
+    &:hover {
+        background-color: #4ecec6;
+    }
+}

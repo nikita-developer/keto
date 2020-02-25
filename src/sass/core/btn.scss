@@ -8,6 +8,7 @@
     background-image: url('../media/btn/bg.jpg');
     background-repeat: no-repeat;
     background-position: center 3px;
+    background-color: transparent;
     border-bottom: 4px solid #278f73;
     border-radius: 40px;
     font-weight: 300;
@@ -15,6 +16,7 @@
     text-align: center;
     line-height: 75px;
     box-sizing: content-box;
+    padding: 0;
 
     & span {
         font-weight: 500;

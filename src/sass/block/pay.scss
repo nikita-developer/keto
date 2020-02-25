@@ -1,9 +1,13 @@
 
 .pay {
-     width: 350px;
-     border-radius: 35px;
-     overflow: hidden;
-     border: 1px solid #b0b0b0;
+    width: 390px;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #b0b0b0;
+
+    &_top {
+        margin-bottom: auto;
+    }
 }
 
 .pay__head {
@@ -26,7 +30,7 @@
 }
 
 .pay__body {
-    padding-top: 20px;
+    padding: 20px 30px;
     background-color: #fff;
 }
 
@@ -34,15 +38,143 @@
     margin-bottom: 10px;
     font-size: 15px;
     color: #9a9a9a;
+    text-align: center;
 }
 
 .pay__good {
+    display: flex;
+    justify-content: center;
+
     & label {
-        font-size: 15px;
+        padding: 5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+
+        & span {
+            vertical-align: middle;
+            font-size: 15px;
+            cursor: pointer;
+        }
     }
 }
 
 .pay__check {
-    width: 11px;
-    height: 11px;
+    display: inline-block;
+    margin-top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 1px solid #c5c5c5;
+}
+
+.pay__accept {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #9a9a9a;
+}
+
+.pay__card {
+    margin-left: 5px;
+}
+
+.pay__item {
+    &_group {
+        display: flex;
+        align-items: center;
+    }
+
+    & + & {
+        margin-top: 10px;
+    }
+
+    & span {
+        font-size: 14px;
+        color: #9a9a9a;
+        white-space: nowrap;
+        margin-right: 20px;
+    }
+}
+
+.pay__field {
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+.pay__select {
+    width: 100%;
+    border: 1px solid #c5c5c5;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &:focus {
+        outline: none;
+    }
+
+    & + & {
+        margin-left: 5px;
+    }
+}
+
+.pay__btn {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.pay__footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 1030px) {
+    .pay {
+        width: 280px;
+    }
+
+    .pay__title {
+        font-size: 36px;
+
+        & span {
+            font-size: 24px;
+        }
+    }
+
+    .pay__body {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .pay__btn {
+        & .btn {
+            width: 200px;
+            height: 50px;
+            line-height: 55px;
+            font-size: 14px;
+            background-size: cover;
+
+            & span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .pay {
+        width: 100%;
+
+        &_top {
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+    }
 }

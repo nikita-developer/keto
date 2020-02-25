@@ -1,4 +1,12 @@
 
 .group {
     display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 768px) {
+    .group {
+        justify-content: center;
+        flex-direction: column;
+    }
 }

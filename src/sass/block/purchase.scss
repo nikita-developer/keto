@@ -10,9 +10,11 @@
 }
 
 .purchase__item {
-    &_white {
+    border: 1px solid #dcdcdc;
+
+    &_active {
         & .purchase__body {
-            background-color: #fff;
+            background-color: #f0efdc;
         }
     }
 }
@@ -43,7 +45,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px;
-    background-color: #f0efdc;
+    background-color: #fff;
 }
 
 .purchase__media {
@@ -107,5 +109,101 @@
 
     &:hover {
         background-color: #4ecec6;
+    }
+}
+
+@media(max-width: 1030px) {
+    .purchase {
+        max-width: 440px;
+    }
+
+    .purchase__head {
+        background: linear-gradient(130deg, #c83c8a 60%, #579aec 60%);
+    }
+
+    .purchase__head-title {
+        font-size: 18px;
+    }
+
+    .purchase__head-subTitle {
+        font-size: 16px;
+    }
+
+    .purchase__media {
+        max-width: 230px;
+    }
+
+    .purchase__info {
+        width: calc(100% - 250px);
+    }
+
+    .purchase__info-title {
+        font-size: 14px;
+
+        & span {
+            font-size: inherit;
+        }
+    }
+
+    .purchase__btn {
+        font-size: 16px;
+    }
+
+    .purchase__savePrice {
+        width: 50px;
+        height: 50px;
+        font-size: 12px;
+
+        & span {
+            font-size: 16px;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .purchase {
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .purchase__head {
+        padding: 5px;
+    }
+
+    .purchase__head-title {
+        font-size: 14px;
+    }
+
+    .purchase__head-subTitle {
+        font-size: 14px;
+    }
+
+    .purchase__media  {
+        max-width: 160px;
+    }
+
+    .purchase__info {
+        width: calc(100% - 170px);
+    }
+
+    .purchase__info-title {
+        font-size: 12px;
+    }
+
+    .purchase__price  {
+        font-size: 26px;
+    }
+
+    .purchase__btn {
+        padding-right: 15px;
+        padding-left: 15px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .purchase__savePrice {
+        bottom: -20px;
     }
 }

@@ -8,6 +8,7 @@
         background-repeat: no-repeat;
         background-position: center bottom;
         background-size: cover;
+        overflow: hidden;
     }
 
     &_steps {
@@ -71,6 +72,65 @@
         background-repeat: no-repeat;
         background-position: right top;
         background-color: #fff;
+    }
+
+    &_popap {
+        display: none;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+    }
+}
+
+.section__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #b1b1b1;
+
+    &:hover {
+        & span {
+            background-color: #ff6d6d;
+
+            &:first-child {
+                transform: rotate(-45deg);
+            }
+
+            &:last-child {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1px;
+        margin-left: -10px;
+        width: 20px;
+        height: 2px;
+        background-color: #b1b1b1;
+        transition: .3s;
+
+        &:first-child {
+            transform: rotate(45deg);
+        }
+
+        &:last-child {
+            transform: rotate(-45deg);
+        }
     }
 }
 
@@ -141,7 +201,7 @@
 
         &_commit {
             background-size: 200px;
-            background-position-x: -130px; 
+            background-position-x: -130px;
         }
     }
 }

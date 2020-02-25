@@ -13,6 +13,10 @@
     font-weight: 700;
     color: #fff;
     text-align: center;
+    
+    & span {
+        font-size: inherit;
+    }
 }
 
 .weight__box {
@@ -117,10 +121,6 @@
         font-size: 16px;
         font-weight: 400;
         letter-spacing: 1px;
-
-        & span {
-            font-size: inherit;
-        }
     }
 
     .weight__box {

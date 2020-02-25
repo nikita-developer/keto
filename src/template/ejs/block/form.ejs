@@ -12,14 +12,14 @@
     </div>
     <div class="form__body">
         <div class="form__item">
-            <select class="form__select" name="" id="">
+            <select class="form__select form__field">
                 <option value="Latvia">Latvia</option>
                 <option value="Latvia2">Latvia2</option>
                 <option value="Latvia3">Latvia3</option>
             </select>
         </div>
         <div class="form__item">
-            <input type="text" class="form__field" placeholder="First Name">
+            <input type="text" class="form__field" placeholder="First Name" required>
         </div>
         <div class="form__item">
             <input type="text" class="form__field" placeholder="Last Name">
@@ -31,19 +31,240 @@
             <input type="text" class="form__field" placeholder="City">
         </div>
         <div class="form__item">
-            <input type="text" class="form__field" placeholder="Select State">
+            <select class="form__select form__field">
+                <option value="Latvia">Select State</option>
+                <option value="Latvia2">Select State</option>
+                <option value="Latvia3">Select State</option>
+            </select>
         </div>
         <div class="form__item">
-            <input type="text" class="form__field" placeholder="Zip Code">
+            <input type="text" class="form__field" placeholder="Zip Code" pattern="[0-9]{3,18}" minlength="3" maxlength="10">
+            <span class="form__error">Это поле должно содержать Zip Code в формате 123123</span>
         </div>
         <div class="form__item">
-            <input type="text" class="form__field" placeholder="Email">
+            <input type="email" class="form__field" placeholder="Email" required>
+            <span class="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
         </div>
         <div class="form__item">
-            <input type="text" class="form__field" placeholder="Telephone">
+            <input type="tel" class="form__field" placeholder="Telephone" pattern="[0-9]{5,18}" minlength="8" maxlength="18">
+            <span class="form__error">Это поле должно содержать телефон в формате 81234567890</span>
         </div>
     </div>
     <div class="form__footer">
-        <div class="form__btn btn">Заказать <span>со скидкой</span></div>
+        <input disabled='disabled' type="submit" class="form__btn btn js-openPopap" value="Заказать со скидкой"></input>
     </div>
 </form>
+
+<div class="timer js-timerTwo timer_show clock flip-clock-wrapper" style="margin:2em;">
+    <span class="flip-clock-divider days">
+        <span class="flip-clock-label">дней</span>
+    </span>
+    <ul class="flip ">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">9</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">9</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="flip ">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+            </a>
+        </li>
+    </ul><span class="flip-clock-divider hours"><span class="flip-clock-label">часов</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+    <ul class="flip ">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">1</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">1</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="flip ">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">3</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">3</div>
+                </div>
+            </a>
+        </li>
+    </ul><span class="flip-clock-divider minutes"><span class="flip-clock-label">минут</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+    <ul class="flip  play">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">1</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">1</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="flip  play">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">0</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">9</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">9</div>
+                </div>
+            </a>
+        </li>
+    </ul><span class="flip-clock-divider seconds"><span class="flip-clock-label">секунд</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
+    <ul class="flip  play">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">3</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">3</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">2</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ul class="flip  play">
+        <li class="flip-clock-before">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">8</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">8</div>
+                </div>
+            </a>
+        </li>
+        <li class="flip-clock-active">
+            <a href="#">
+                <div class="up">
+                    <div class="shadow"></div>
+                    <div class="inn">7</div>
+                </div>
+                <div class="down">
+                    <div class="shadow"></div>
+                    <div class="inn">7</div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
