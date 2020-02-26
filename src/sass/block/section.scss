@@ -94,6 +94,15 @@
         background-color: rgba(0, 0, 0, 0.2);
         overflow-y: auto;
     }
+
+    &_footer {
+        background-image: url("../media/section/header-2.jpg");
+        padding-bottom: 120px;
+    }
+
+    &_contact {
+        background-color: #fbfbfb;
+    }
 }
 
 .section__btn {

@@ -165,7 +165,9 @@ $(document).ready(function() {
 
     $('.form__field').on("blur", function(){
         if($('.form').valid()) {
-            $('.form__btn').removeAttr("disabled");
+            $('.form__btn').prop('disabled', false);
+        } else {
+            $('.form__btn').prop('disabled', true);
         }
     });
 });
