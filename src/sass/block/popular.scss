@@ -1,4 +1,18 @@
 
+.popular {
+    position: relative;
+}
+
+.popular__product {
+    position: absolute;
+    bottom: -40px;
+    right: -80px;
+    width: 252px;
+    height: 455px;
+    background-image: url('../media/popular/product.png');
+    background-size: cover;
+}
+
 .popular__title {
     margin-bottom: 40px;
     font-size: 90px;
@@ -41,6 +55,13 @@
 }
 
 @media(max-width: 1030px) {
+    .popular__product  {
+        width: 130px;
+        height: 247px;
+        bottom: -40px;
+        right: 65px;
+    }
+
     .popular__title {
         font-size: 80px;
         margin-bottom: 20px;
@@ -57,6 +78,17 @@
 }
 
 @media(max-width: 768px) {
+    .popular {
+        padding-bottom: 50px;
+    }
+
+    .popular__product {
+        width: 100px;
+        height: 190px;
+        bottom: -50px;
+        right: 0px;
+    }
+
     .popular__title {
         font-size: 60px;
         margin-bottom: 20px;
@@ -68,11 +100,23 @@
 
     .popular__description {
         font-size: 16px;
-        max-width: 450px;
+        max-width: 100%;
+
+        & mark {
+            display: block;
+            max-width: 260px;
+        }
     }
 }
 
 @media(max-width: 480px) {
+    .popular__product {
+        width: 70px;
+        height: 134px;
+        bottom: -18px;
+        right: 40px;
+    }
+
     .popular__title {
         font-size: 28px;
         text-align: center;
@@ -88,5 +132,11 @@
     .popular__description {
         font-size: 14px;
         max-width: none;
+    }
+}
+
+@media(max-width: 370px) {
+    .popular__product {
+        display: none;
     }
 }

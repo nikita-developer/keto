@@ -44,9 +44,9 @@
         & .proces__media {
             &::before {
                 right: 0;
-                bottom: -10px;
-                width: 80px;
-                height: 159px;
+                bottom: -40px;
+                width: 162px;
+                height: 238px;
                 background-image: url('../media/proces/img-4.png');
             }
         }
@@ -56,6 +56,10 @@
 .proces__name {
     font-size: 24px;
     margin-bottom: 20px;
+
+    &_color {
+        color: #44aca6;
+    }
 }
 
 .proces__media {
@@ -68,6 +72,7 @@
         position: absolute;
         background-repeat: no-repeat;
         content: '';
+        background-size: cover;
     }
 }
 
@@ -79,6 +84,7 @@
         background-color: transparent;
         font-size: inherit;
         font-weight: 500;
+        color: #44aca6;
     }
 }
 
@@ -202,10 +208,9 @@
             & .proces__media {
                 &::before {
                     right: 5px;
-                    bottom: 10px;
-                    width: 44px;
-                    height: 87px;
-                    background-image: url('../media/proces/img-4-768.png');
+                    bottom: -20px;
+                    width: 80px;
+                    height: 110px;
                 }
             }
         }

@@ -85,6 +85,16 @@
     &_group {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
+
+        & .pay__select {
+            width: 30%;
+            margin-right: 5px;
+        }
+
+        & label {
+            order: 1;
+        }
     }
 
     & + & {
@@ -96,6 +106,22 @@
         color: #9a9a9a;
         white-space: nowrap;
         margin-right: 20px;
+    }
+
+    & .error {
+        display: block;
+        border-color: red;
+        color: red;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    & .valid {
+        display: block;
+        border-color: #4ec452;
+        color: #4ec452;
+        font-size: 14px;
+        margin-top: 3px;
     }
 }
 
@@ -109,7 +135,6 @@
 }
 
 .pay__select {
-    width: 100%;
     border: 1px solid #c5c5c5;
     padding: 8px;
     border-radius: 4px;

@@ -58,7 +58,6 @@
 
     &_health {
         background-color: #fff;
-        padding-bottom: 0;
     }
 
     &_weight {
@@ -71,6 +70,14 @@
         background-image: url("../media/section/commit.jpg");
         background-repeat: no-repeat;
         background-position: right top;
+        background-color: #fff;
+    }
+
+    &_proces {
+        position: relative;
+        background-image: url("../media/section/proces.jpg");
+        background-repeat: no-repeat;
+        background-position: center bottom;
         background-color: #fff;
     }
 
@@ -87,6 +94,11 @@
         background-color: rgba(0, 0, 0, 0.2);
         overflow-y: auto;
     }
+}
+
+.section__btn {
+    margin-top: 70px;
+    text-align: center;
 }
 
 .section__close {
@@ -165,13 +177,17 @@
         &_health {
             padding-bottom: 60px;
         }
+
+        &_proces {
+            background-image: url("../media/section/proces-1030.jpg");
+        }
     }
 }
 
 @media(max-width: 768px) {
     .section {
         &_popular {
-            background-image: none;
+            background-image: url("../media/section/popular-768.jpg");
         }
 
         &_join {
@@ -180,6 +196,10 @@
 
         &_brand {
             background-image: url("../media/section/brand-768.jpg");
+        }
+
+        &_proces {
+            background-image: url("../media/section/proces-768.jpg");
         }
     }
 }
@@ -202,6 +222,18 @@
         &_commit {
             background-size: 200px;
             background-position-x: -130px;
+        }
+
+        &_popular {
+            background-image: url("../media/section/popular-480.jpg");
+        }
+    }
+}
+
+@media(max-width: 370px) {
+    .section {
+        &_popular {
+            background-image:none;
         }
     }
 }

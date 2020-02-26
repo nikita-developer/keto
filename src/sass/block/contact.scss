@@ -25,6 +25,22 @@
         display: flex;
         align-items: center;
     }
+
+    & .error {
+        display: block;
+        border-color: red;
+        color: red;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    & .valid {
+        display: block;
+        border-color: #4ec452;
+        color: #b0b0b0;
+        font-size: 14px;
+        margin-top: 3px;
+    }
 }
 
 .contact__select {
@@ -81,5 +97,13 @@
 
     &:hover {
         background-color: #4ecec6;
+    }
+
+    &_orange {
+        background-color: #ffd897;
+
+        &:hover {
+            background-color: #ffc25d;
+        }
     }
 }

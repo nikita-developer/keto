@@ -43,6 +43,22 @@
     & + & {
         margin-top: 8px;
     }
+
+    & .error {
+        display: block;
+        border-color: red;
+        color: red;
+        font-size: 14px;
+        margin-top: 3px;
+    }
+
+    & .valid {
+        display: block;
+        border-color: #4ec452;
+        color: #b0b0b0;
+        font-size: 14px;
+        margin-top: 3px;
+    }
 }
 
 .form__select {
@@ -51,6 +67,10 @@
     border: 1px solid #b0b0b0;
     border-radius: 4px;
     color: #b0b0b0;
+
+    & option {
+        color: #b0b0b0;
+    }
 }
 
 .form__field {
@@ -60,40 +80,14 @@
     border-radius: 4px;
 }
 
-.form__field:valid:not(:placeholder-shown) {
-	border-color: #00bf00;
-}
-
-.form__field:invalid:not(:placeholder-shown) {
-	border-color: red;
-}
-.form__field:invalid:not(:placeholder-shown) + .form__error {
-	display: block;
-}
-
-.form__error {
-	color: red;
-	text-align: left;
-	font-size: 12px;
-	display: block;
-	margin-top: 3px;
-	display: none;
-}
-
 .form__footer {
     padding: 0 30px 40px;
     text-align: center;
+}
 
-    & .btn[disabled='disabled'] {
-        background-image: none;
-        background-color: #cecece;
-        border-bottom-color: transparent;
-        cursor: default;
-
-        &:hover {
-            border-top: 0 solid transparent;
-            border-bottom-width: 4px;
-        }
+.form__btn {
+    &_disabled {
+        color: #000;
     }
 }
 

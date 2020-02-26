@@ -3,12 +3,18 @@ $(document).ready(function() {
     $('.js-join__slide').owlCarousel({
         items: 1,
         loop: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
         nav: true
     });
 
     $('.js-commit__slide').owlCarousel({
         items: 1,
         loop: true,
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
         responsive : {
             0 : {
                 nav: false,
@@ -47,8 +53,8 @@ $(document).ready(function() {
     var $result = getSecondsToTomorrow();
 
     clock.setTime($result);      //Устанавливаем нужное время в секундах
-    clock.setCountdown(true);   //Устанавливаем отсчет назад
-    clock.start();              //Запускаем отсчет
+    clock.setCountdown(true);     //Устанавливаем отсчет назад
+    clock.start();                //Запускаем отсчет
     clock2.setTime($result);      //Устанавливаем нужное время в секундах
     clock2.setCountdown(true);   //Устанавливаем отсчет назад
     clock2.start();              //Запускаем отсчет
@@ -76,37 +82,90 @@ $(document).ready(function() {
         $('.purchase__btn').text('SELECTED PACKAGE!');
         $('.purchase__item').removeClass('purchase__item_active');
         $(this).text('SELECTED!').parents('.purchase__item').addClass('purchase__item_active');
+        var price = $(this).prev().text();
+        $('.js-price').text(price);
     })
 
-    // $('.form').change(function() {
-    //     if($('input.form__field').map(function(index, domElement) {
-    //         if ($(domElement).val() !== "")
-    //             return domElement;
-    //     }).length < 7) {
-    //         $("input[type='submit']").attr('disabled', 'disabled');
-    //     } else {
-    //         $("input[type='submit']").removeAttr('disabled');
-    //     }
-    // });
-
-    $('.form').each(function(){
-        var form = $(this),
-            btn = form.find('.form__btn');
-
-        // Функция проверки полей формы
-        function checkInput() {
-            form.find('.form__field').each(function() {
-                if($(this).val() != '') {
-                    // Если поле не пустое удаляем класс-указание
-                    $("input[type='submit']").removeAttr('disabled');
-                } else {
-                    // Если поле пустое добавляем класс-указание
-                    $("input[type='submit']").attr('disabled', 'disabled');
-                }
-            });
+    $('.form').validate({
+        rules:{
+            tel:{
+                minlength: 6,
+                maxlength: 18,
+                number: true
+            },
+            ZipCode:{
+                minlength: 2,
+                maxlength: 18,
+                number: true
+            }
         }
-        setInterval(function(){
-            checkInput();
-        },500);
+    });
+
+    $('.pay__form').validate({
+        rules:{
+            card:{
+                minlength: 16,
+                maxlength: 16,
+                number: true
+            },
+            cvv:{
+                minlength: 3,
+                maxlength: 3,
+                number: true
+            }
+        }
+    });
+
+    $('.contact__form').validate({
+        rules:{
+            email:{
+                email: true,
+                required: true
+            },
+            tel:{
+                required: true,
+                number: true
+            }
+        }
+    });
+
+    $(".form").submit(function () {
+        var formID = $(this);
+        $.ajax({
+            type: "POST",
+            url: 'mail.php',
+            data: formID.serialize(),
+            success: function () {
+                showSucses ()
+            },
+            error: function () {
+                showError()
+            }
+        });
+        return false;
+    });
+
+    function showError () {
+        $('.messageError').fadeIn();
+        setTimeout(hideError, 3000);
+    }
+
+    function hideError () {
+        $('.messageError').fadeOut();
+    }
+
+    function showSucses () {
+        $('.messageSuccess').fadeIn();
+        setTimeout(hideError, 3000);
+    }
+
+    function hideSucses () {
+        $('.messageSuccess').fadeOut();
+    }
+
+    $('.form__field').on("blur", function(){
+        if($('.form').valid()) {
+            $('.form__btn').removeAttr("disabled");
+        }
     });
 });

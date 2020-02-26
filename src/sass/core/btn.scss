@@ -27,6 +27,25 @@
         border-top: 4px solid transparent;
         border-bottom-width: 0;
     }
+
+    &_orange {
+        background-image: url('../media/btn/bg_orange.jpg');
+        border-bottom: 9px solid #b05051;
+        width: 375px;
+        height: 103px;
+        border-radius: 56px;
+        line-height: 103px;
+        font-size: 26px;
+
+        &:hover {
+            border-top: 9px solid transparent;
+        }
+
+        & span {
+            font-weight: 700;
+            font-size: 28px;
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -39,6 +58,14 @@
 
         & span {
             font-size: 14px;
+        }
+
+        &_orange {
+            border-bottom: 4px solid #b05051;
+
+            &:hover {
+                border-top: 4px solid transparent;
+            }
         }
     }
 }

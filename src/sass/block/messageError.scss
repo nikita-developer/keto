@@ -1,0 +1,38 @@
+
+.messageError {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 15px;
+    right: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+.messageError__title {
+    font-size: 18px;
+
+    & span {
+        display: block;
+    }
+}
+
+.messageSuccess {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 15px;
+    right: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid green;
+}
+
+.messageSuccess__title {
+    font-size: 18px;
+
+    & span {
+        display: block;
+    }
+}
