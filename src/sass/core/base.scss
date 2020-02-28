@@ -38,7 +38,7 @@ html {
 }
 
 .hide_body {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 input::-webkit-input-placeholder { color: #b0b0b0; opacity: 1;}

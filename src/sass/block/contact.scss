@@ -1,9 +1,11 @@
 
 .contact {
     border-radius: 25px;
-    overflow: hidden;
     border: 1px solid #b0b0b0;
     padding: 30px;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .contact__title {
@@ -105,5 +107,11 @@
         &:hover {
             background-color: #ffc25d;
         }
+    }
+}
+
+@media(max-width: 768px) {
+    .contact {
+        width: 100%;
     }
 }

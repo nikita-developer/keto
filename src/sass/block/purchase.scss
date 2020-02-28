@@ -3,13 +3,8 @@
     max-width: 590px;
 }
 
-.purchase__description {
-    margin-bottom: 15px;
-    font-size: 15px;
-    color: #9a9a9a;
-}
-
 .purchase__item {
+    cursor: pointer;
     border: 1px solid #dcdcdc;
 
     &_active {

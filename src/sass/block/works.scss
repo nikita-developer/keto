@@ -155,6 +155,11 @@
     font-family: 'Bebas';
     margin-bottom: 30px;
     line-height: .8;
+
+    & span {
+        font-size: inherit;
+        display: none;
+    }
 }
 
 .works__benefit-info {
@@ -283,6 +288,10 @@
             margin-top: 30px;
             text-align: left;
         }
+
+        &:last-child {
+            display: none;
+        }
     }
 
     .works__benefit-info {
@@ -298,6 +307,10 @@
     .works__benefit-title {
         margin-bottom: 15px;
         font-size: 40px;
+
+        & span {
+            display: inline;
+        }
     }
 
     .works__benefit-media {

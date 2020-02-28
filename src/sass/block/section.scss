@@ -100,8 +100,18 @@
         padding-bottom: 120px;
     }
 
-    &_contact {
-        background-color: #fbfbfb;
+    &_popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
     }
 }
 
@@ -155,6 +165,26 @@
     }
 }
 
+@media(max-width: 1700px) {
+    .section {
+        &_header {
+            background-image: url("../media/section/header-1920.jpg");
+        }
+    }
+}
+
+@media(max-width: 1280px) {
+    .section {
+        &_brand {
+            background-image: url("../media/section/brand-1280.jpg");
+        }
+
+        &_join {
+            background-image: url("../media/section/join-1280.jpg");
+        }
+    }
+}
+
 @media(max-width: 1030px) {
     .section {
         &_header {
@@ -180,7 +210,6 @@
             padding-top: 60px;
             padding-bottom: 100px;
             background-image: url("../media/section/brand-1030.jpg");
-            background-size: cover;
         }
 
         &_health {
