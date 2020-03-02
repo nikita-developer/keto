@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 // запуск таймеров
     var clock;
-    var futureDate = new Date("Mart 02, 2020 0:00 PM EDT");
+    var futureDate = new Date("Mart 04, 2020 0:00 PM EDT");
     var currentDate = new Date();
     var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
     });
 
     var clock2;
-    var futureDate = new Date("Mart 02, 2020 0:00 PM EDT");
+    var futureDate = new Date("Mart 04, 2020 0:00 PM EDT");
     var currentDate = new Date();
     var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
@@ -78,7 +78,6 @@ $(document).ready(function() {
             $('.form').trigger('reset');
             $('.form__field, .form__select').removeClass('valid');
             e.preventDefault();
-            console.log(2);
         }
     })
 
@@ -91,24 +90,28 @@ $(document).ready(function() {
 	});
 
     $('.purchase__item').click(function (){
+        var priceType = $('.js-priceDlivery');
         var price = $('.js-price');
         var priceRetail = $('.js-priceRetail');
         var priceSave = $('.js-priceSave b');
 
         if($(this).index() == 0) {
-            price.text('$136')
-            priceRetail.text('Retail: $264')
-            priceSave.text('You Save: $103')
+            priceType.text('€0')
+            price.text('€136')
+            priceRetail.text('Retail: €354')
+            priceSave.text('You Save: €218')
             console.log(1);
         } else if ($(this).index() == 1) {
-            price.text('$117')
-            priceRetail.text('Retail: $132')
-            priceSave.text('You Save: $44')
+            priceType.text('€0')
+            price.text('€117')
+            priceRetail.text('Retail: €236')
+            priceSave.text('You Save: €119')
             console.log(2);
         } else {
-            price.text('$5')
-            priceRetail.text('Retail: $44')
-            priceSave.text('You Save: $5')
+            priceType.text('€5')
+            price.text('€44')
+            priceRetail.text('Retail: €59')
+            priceSave.text('You Save: €20')
             console.log(3);
         }
 
@@ -171,7 +174,7 @@ $(document).ready(function() {
             $('.pay__form').trigger('reset');
             $('.pay__field, .pay__select').removeClass('valid');
             e.preventDefault();
-            showError ();
+            showError();
         }
     })
 
@@ -184,20 +187,10 @@ $(document).ready(function() {
 
     function showError () {
         $('.messageError').fadeIn();
-        setTimeout(hideError, 7000);
-    }
 
-    function hideError () {
-        $('.messageError').fadeOut();
-    }
-
-    function showSucses () {
-        $('.messageSuccess').fadeIn();
-        setTimeout(hideError, 7000);
-    }
-
-    function hideSucses () {
-        $('.messageSuccess').fadeOut();
+        $('.messageError__close').click(function () {
+            $(this).parent().fadeOut();
+        })
     }
 
     // Cкролл к форме
