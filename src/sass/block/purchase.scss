@@ -82,6 +82,57 @@
 
 .purchase__media {
     position: relative;
+    z-index: 1;
+}
+
+.purchase__media-save {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 78px;
+    height: 73px;
+    background-image: url('../media/purchase/save.png');
+    background-repeat: no-repeat;
+
+    & p {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: .9;
+        text-align: center;
+        margin-right: 8px;
+
+        & span {
+            display: block;
+            font-size: 14px;
+        }
+    }
+}
+
+.purchase__media-normal {
+    position: absolute;
+    top: 35px;
+    left: 55px;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 145px;
+    height: 90px;
+    border: 2px dashed #c5c5c5;
+    font-size: 22px;
+    font-weight: 700;
+    font-style: italic;
+    color: #c5c5c5;
+    padding: 15px 15px 15px 25px;
+    border-radius: 5px;
+
+    & span {
+        font-size: inherit;
+    }
 }
 
 .purchase__savePrice {
@@ -192,6 +243,25 @@
             font-size: 16px;
         }
     }
+
+    .purchase__media-save {
+        background-size: cover;
+        width: 60px;
+        height: 55px;
+
+        & p {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+    }
+
+    .purchase__media-normal {
+        top: 23px;
+        left: 38px;
+        font-size: 16px;
+        width: 120px;
+        height: 60px;
+    }
 }
 
 @media(max-width: 768px) {
@@ -239,5 +309,30 @@
 
     .purchase__savePrice {
         bottom: -20px;
+    }
+
+    .purchase__media-save {
+        width: 45px;
+        height: 44px;
+
+        & p {
+            line-height: 1;
+            font-size: 12px;
+            margin-right: 0;
+
+            & span {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .purchase__media-normal {
+        top: 15px;
+        left: 33px;
+        font-size: 14px;
+        width: 110px;
+        height: 50px;
+        padding: 10px;
+        font-weight: 400;
     }
 }
