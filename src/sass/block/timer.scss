@@ -1,16 +1,5 @@
 
 .timer  {
-    &_show {
-        display: none;
-    }
-}
-
-@media(max-width: 1030px) {
-    .timer  {
-        display: none;
-
-        &_show {
-            display: block;
-        }
-    }
+    margin-right: auto !important;
+    margin-left: auto !important;
 }

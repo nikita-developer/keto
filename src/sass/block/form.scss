@@ -5,6 +5,7 @@
     border: 1px solid #b0b0b0;
     border-radius: 20px;
     overflow: hidden;
+    padding-bottom: 30px;
 }
 
 .form__head {
@@ -40,33 +41,32 @@
 }
 
 .form__item {
+    display: block;
+
     & + & {
-        margin-top: 8px;
+        margin-top: 15px;
     }
 
-    & .error {
+    & > span {
         display: block;
-        border-color: red;
-        color: red;
+        margin-bottom: 2px;
+        margin-left: 27px;
         font-size: 14px;
-        margin-top: 3px;
-    }
-
-    & .valid {
-        display: block;
-        border-color: #4ec452;
         color: #b0b0b0;
-        font-size: 14px;
-        margin-top: 3px;
+        font-weight: 400;
     }
 }
 
 .form__select {
+    position: relative;
     width: 100%;
-    padding: 6.5px;
     border: 1px solid #b0b0b0;
     border-radius: 4px;
-    color: #b0b0b0;
+    color: #b0b0b0 !important;
+    appearance: none;
+    background-image: url("../media/form/arrow.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 25px) center;
 
     & option {
         color: #b0b0b0;
@@ -75,20 +75,39 @@
 
 .form__field {
     width: 100%;
-    padding: 6.5px;
+    padding: 17.5px 25px;
     border: 1px solid #b0b0b0;
-    border-radius: 4px;
+    border-radius: 50px;
+    color: #707070;
+    font-size: 14px;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .form__footer {
-    padding: 0 30px 40px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
 .form__btn {
+    box-shadow: 11px 20px 51px -23px #02b387;
+
     &_disabled {
         color: #000;
     }
+}
+
+.form__timer {
+    margin-bottom: 30px;
+}
+
+.form__timer-title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 @media(max-width: 1030px) {
@@ -107,7 +126,7 @@
     }
 
     .form__footer {
-        padding: 0 15px 30px;
+        margin-bottom: 20px;
     }
 
     .form__head-name {

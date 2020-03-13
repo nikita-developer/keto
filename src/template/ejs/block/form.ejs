@@ -10,8 +10,9 @@
         </div>
     </div>
     <div class="form__body">
-        <div class="form__item">
+        <label class="form__item">
             <select name="lang" class="form__select form__field" required>
+                <option selected="selected">Страна</option>
                 <option value="AF" class="different option">Afghanistan</option>
                 <option value="AX" class="different option">Aland Islands</option>
                 <option value="AL" class="different option">Albania</option>
@@ -191,7 +192,7 @@
                 <option value="QA" class="different option">Qatar</option>
                 <option value="RE" class="different option">Reunion</option>
                 <option value="RO" class="different option">Romania</option>
-                <option value="RU" class="different option" selected="selected">Russia</option>
+                <option value="RU" class="different option">Russia</option>
                 <option value="RW" class="different option">Rwanda</option>
                 <option value="BL" class="different option">Saint Barthelemy</option>
                 <option value="SH" class="different option">Saint Helena</option>
@@ -253,269 +254,21 @@
                 <option value="ZM" class="different option">Zambia</option>
                 <option value="ZW" class="different option">Zimbabwe</option>
             </select>
-        </div>
-        <div class="form__item">
-            <input name="firstName" type="text" class="form__field" placeholder="First Name" required>
-        </div>
-        <div class="form__item">
-            <input name="lastName" type="text" class="form__field" placeholder="Last Name" required>
-        </div>
-        <div class="form__item">
-            <input name="adres" type="text" class="form__field" placeholder="Address" required>
-        </div>
-        <div class="form__item">
-            <input name="city" type="text" class="form__field" placeholder="City" required>
-        </div>
-        <div class="form__item">
-            <select name="state" class="form__select form__field">
-                <option value="" disabled="" selected="">Select State</option>
-                <option value="Bougainville">Bougainville</option>
-                <option value="Central">Central</option>
-                <option value="Chimbu">Chimbu</option>
-                <option value="East New Britain">East New Britain</option>
-                <option value="East Sepik">East Sepik</option>
-                <option value="Eastern Highlands">Eastern Highlands</option>
-                <option value="Enga">Enga</option>
-                <option value="Gulf">Gulf</option>
-                <option value="Madang">Madang</option>
-                <option value="Manus">Manus</option>
-                <option value="Milne Bay">Milne Bay</option>
-                <option value="Morobe">Morobe</option>
-                <option value="National Capital District">National Capital District</option>
-                <option value="New Ireland">New Ireland</option>
-                <option value="Northern">Northern</option>
-                <option value="Sandaun">Sandaun</option>
-                <option value="Southern Highlands">Southern Highlands</option>
-                <option value="West New Britain">West New Britain</option>
-                <option value="Western">Western</option>
-                <option value="Western Highlands">Western Highlands</option>
-            </select>
-        </div>
-        <div class="form__item">
-            <input name="zipCode" type="text" class="form__field" placeholder="Zip Code" required maxlength="18">
-        </div>
-        <div class="form__item">
-            <input name="mail" type="email" class="form__field" placeholder="Email" required>
-        </div>
-        <div class="form__item">
-            <input name="phone" type="tel" class="form__field" placeholder="Telephone" required maxlength="16">
-        </div>
+        </label>
+        <label class="form__item">
+            <span>Ваше имя</span>
+            <input name="firstName" type="text" class="form__field" required>
+        </label>
+        <label class="form__item">
+            <span>Номер телефона</span>
+            <input name="phone" type="tel" class="form__field" required maxlength="16">
+        </label>
     </div>
     <div class="form__footer">
         <input class="submit form__btn btn js-openPopap" type="submit" value="Заказать со скидкой">
     </div>
+    <div class="form__timer">
+        <div class="form__timer-title">До окончании акции осталось:</div>
+        <div class="timer js-timer clock flip-clock-wrapper"></div>
+    </div>
 </form>
-
-<div class="timer js-timerTwo timer_show clock flip-clock-wrapper" style="margin:2em;">
-    <span class="flip-clock-divider days">
-        <span class="flip-clock-label">дней</span>
-    </span>
-    <ul class="flip ">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">9</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">9</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <ul class="flip ">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-            </a>
-        </li>
-    </ul><span class="flip-clock-divider hours"><span class="flip-clock-label">часов</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-    <ul class="flip ">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">1</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">1</div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <ul class="flip ">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">3</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">3</div>
-                </div>
-            </a>
-        </li>
-    </ul><span class="flip-clock-divider minutes"><span class="flip-clock-label">минут</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-    <ul class="flip  play">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">1</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">1</div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <ul class="flip  play">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">0</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">9</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">9</div>
-                </div>
-            </a>
-        </li>
-    </ul><span class="flip-clock-divider seconds"><span class="flip-clock-label">секунд</span><span class="flip-clock-dot top"></span><span class="flip-clock-dot bottom"></span></span>
-    <ul class="flip  play">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">3</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">3</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">2</div>
-                </div>
-            </a>
-        </li>
-    </ul>
-    <ul class="flip  play">
-        <li class="flip-clock-before">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">8</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">8</div>
-                </div>
-            </a>
-        </li>
-        <li class="flip-clock-active">
-            <a href="#">
-                <div class="up">
-                    <div class="shadow"></div>
-                    <div class="inn">7</div>
-                </div>
-                <div class="down">
-                    <div class="shadow"></div>
-                    <div class="inn">7</div>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
